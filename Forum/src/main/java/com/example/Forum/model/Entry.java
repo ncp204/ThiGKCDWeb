@@ -1,4 +1,4 @@
-package com.example.Forum.model;
+package com.example.forum.model;
 
 import java.util.Calendar;
 

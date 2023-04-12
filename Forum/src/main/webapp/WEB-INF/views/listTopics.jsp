@@ -19,7 +19,7 @@
     </head>
 
     <%--@elvariable id="user" type="com.example.Forum.model.User"--%>
-    <h2 class="header">Chào ${user.username} | <a href="${pageContext.request.contextPath}/login">Thoát</a> </h2>
+    <h2 class="header">Chào ${user.username} | <a href="${pageContext.request.contextPath}/logout">Thoát</a> </h2>
 
     <h2>Diễn đàn : Chuyện học phí và các chính sách hỗ trợ học tập</h2>
     

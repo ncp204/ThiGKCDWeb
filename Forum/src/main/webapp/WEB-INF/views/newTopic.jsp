@@ -11,7 +11,7 @@
 </head>
 
 <%--@elvariable id="user" type="com.example.Forum.model.User"--%>
-<h2 class="header">Chào ${user.username} | <a href="${pageContext.request.contextPath}/login">Thoát</a> </h2>
+<h2 class="header">Chào ${user.username} | <a href="${pageContext.request.contextPath}/logout">Thoát</a> </h2>
 
 <form action="newTopic" method="post">
     <div>

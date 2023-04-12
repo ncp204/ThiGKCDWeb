@@ -1,17 +1,17 @@
-package com.example.Forum.model;
-
-import jakarta.validation.constraints.Size;
+package com.example.forum.model;
 
 import java.util.Date;
 
+import jakarta.validation.constraints.Size;
+
 public class User {
-	@Size(min =3, max =50)
+	@Size(min = 3, max = 50)
 	private String username;
 	@Size(min = 3, max = 15)
 	private String password;
 	private String email;
 	private Date joinDate;
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -44,8 +44,7 @@ public class User {
 		this.joinDate = joinDate;
 	}
 
-	public User(String username, String password, String email,
-			Date joinDate) {
+	public User(String username, String password, String email, Date joinDate) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -55,11 +54,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User{" +
-				"username='" + username + '\'' +
-				", password='" + password + '\'' +
-				", email='" + email + '\'' +
-				", joinDate=" + joinDate +
-				'}';
+		return "User{" + "username='" + username + '\'' + ", password='" + password + '\'' + ", email='" + email + '\''
+				+ ", joinDate=" + joinDate + '}';
 	}
 }

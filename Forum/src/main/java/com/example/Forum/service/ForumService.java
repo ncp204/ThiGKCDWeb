@@ -1,4 +1,4 @@
-package com.example.Forum.service;
+package com.example.forum.service;
 
 import java.util.Calendar;
 import java.util.Collection;
@@ -6,10 +6,10 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.example.Forum.model.User;
-import com.example.Forum.model.Category;
-import com.example.Forum.model.Message;
-import com.example.Forum.model.Topic;
+import com.example.forum.model.Category;
+import com.example.forum.model.Message;
+import com.example.forum.model.Topic;
+import com.example.forum.model.User;
 
 public class ForumService {
 	private static final ForumService instance = new ForumService();
@@ -39,8 +39,7 @@ public class ForumService {
 				new User("GSKH", "GSKH", "giasu@yahoo.com", new GregorianCalendar(2007, Calendar.JULY, 14).getTime()));
 
 		Topic topic1 = new Topic(1, "Chuyện học phí!!!",
-				"Từ lớp mẫu giáo đến lớp 12-trường công-Tại sao lại phải đóng học phí?!", users.get("doctorQ"),
-				cat1);
+				"Từ lớp mẫu giáo đến lớp 12-trường công-Tại sao lại phải đóng học phí?!", users.get("doctorQ"), cat1);
 		topic1.addMessage(new Message("Re: Chuyện học phí!!!",
 				"Thưa anh (chị) em muôn hỏi là sinh viên dân tộc thiểu số có được miễn giảm "
 						+ "học phí hay không? Và những yêu cầu gì đối với sinh viên "

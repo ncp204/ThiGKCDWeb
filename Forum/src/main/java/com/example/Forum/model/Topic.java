@@ -1,6 +1,5 @@
-package com.example.Forum.model;
+package com.example.forum.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
@@ -9,8 +8,7 @@ public class Topic extends Entry {
 	private Stack<Message> messages = new Stack<Message>();
 	private Category category;
 
-	public Topic(Integer id, String title, String content, 
-	      User creator, Category category) {
+	public Topic(Integer id, String title, String content, User creator, Category category) {
 		super(title, content, creator);
 		this.id = id;
 		this.category = category;
@@ -21,14 +19,14 @@ public class Topic extends Entry {
 	}
 
 	public Category getCategory() {
-      return category;
-   }
+		return category;
+	}
 
-   public void setCategory(Category category) {
-      this.category = category;
-   }
+	public void setCategory(Category category) {
+		this.category = category;
+	}
 
-   public List<Message> getMessages() {
+	public List<Message> getMessages() {
 		return messages.subList(0, messages.size());
 	}
 
@@ -43,7 +41,7 @@ public class Topic extends Entry {
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Topic{" +

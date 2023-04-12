@@ -9,6 +9,14 @@
 	font-size: initial;
 	text-align: right;
 }
+
+body {
+	margin: 0
+}
+
+table {
+	width: 100vw;
+}
 </style>
 <link href="css/global.css" rel="stylesheet">
 </head>

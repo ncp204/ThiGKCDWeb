@@ -3,6 +3,20 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <header>
+	<style>
+.header {
+	font-size: initial;
+	text-align: right;
+}
+
+body {
+	margin: 0
+}
+
+table {
+	width: 100vw;
+}
+</style>
 	<title>Welcome</title>
 	<link href="css/login.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">

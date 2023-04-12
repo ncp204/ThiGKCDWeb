@@ -14,7 +14,6 @@
 body {
 	margin: 0
 }
-    <body>
 
 table {
 	width: 100vw;
@@ -24,8 +23,11 @@ table {
 
 <body>
 
-        <%--@elvariable id="user" type="com.example.Forum.model.User"--%>
-        <h2 class="header">Chào ${user.username} | <a href="${pageContext.request.contextPath}/logout">Thoát</a> </h2>
+	<%--@elvariable id="user" type="com.example.Forum.model.User"--%>
+	<h2 class="header">
+		Chào ${user.username} | <a
+			href="${pageContext.request.contextPath}/logout">Thoát</a>
+	</h2>
 
 	<h2>Chủ đề : ${topic.getTitle()}</h2>
 

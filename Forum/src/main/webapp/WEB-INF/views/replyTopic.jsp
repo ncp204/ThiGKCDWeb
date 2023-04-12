@@ -18,9 +18,6 @@ table {
 </style>
 <link href="css/global.css" rel="stylesheet">
 </head>
-
-
-<%--@elvariable id="user" type="com.example.Forum.model.User"--%>
 <h2 class="header">
 	Chào ${user.username} | <a
 		href="${pageContext.request.contextPath}/logout">Thoát</a>

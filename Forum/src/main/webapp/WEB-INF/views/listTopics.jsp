@@ -21,8 +21,6 @@ table {
 <link href="css/global.css" rel="stylesheet">
 </head>
 <body>
-
-	<%--@elvariable id="user" type="com.example.Forum.model.User"--%>
 	<h2 class="header">
 		Chào ${user.username} | <a
 			href="${pageContext.request.contextPath}/logout">Thoát</a>
@@ -46,7 +44,6 @@ table {
 			</tr>
 		</thead>
 		<tbody>
-			<%--@elvariable id="topics" type="java.util.Collection"--%>
 			<c:forEach var="i" items="${topics}">
 				<tr>
 					<td><a href="showTopic/${i.id}">${i.getTitle()}</a> <fmt:formatDate

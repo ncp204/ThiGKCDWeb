@@ -25,7 +25,6 @@ table {
 	<div class="wrap">
 		<div class="login-box">
 			<h1 class="title">Đăng nhập</h1>
-			<%--@elvariable id="user" type="com.example.Forum.model.User"--%>
 			<div class="login-form">
 				<form:form id="form" action="login" method="post"
 					modelAttribute="user">

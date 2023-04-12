@@ -1,23 +1,21 @@
-package com.example.Forum.controller;
+package com.example.forum.controller;
 
-import com.example.Forum.model.Message;
-import com.example.Forum.model.Topic;
-import com.example.Forum.model.User;
-import com.example.Forum.service.ForumService;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Collection;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import com.example.forum.model.Topic;
+import com.example.forum.model.User;
+import com.example.forum.service.ForumService;
+
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
-
-import org.springframework.ui.Model;
-
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
 
 @Controller
 @SessionAttributes("user")

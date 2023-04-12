@@ -1,36 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <header>
-    <title>Welcome</title>
-    <link href="css/login.css"
-          rel="stylesheet">
+	<title>Welcome</title>
+	<link href="css/login.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
 </header>
-<div class="login-box">
-    <h2>Login</h2>
-
-    <%--@elvariable id="user" type="com.example.Forum.model.User"--%>
-    <form:form action="login" method="post" modelAttribute="user">
-        <div>
-            <form:label path="username">Username:</form:label>
-            <form:input path="username" />
-            <form:errors path="username" cssClass="error" />
-        </div>
-
-        <div>
-            <form:label path="password">Password:</form:label>
-            <form:password path="password"/>
-            <form:errors path="password" cssClass="error" />
-        </div>
-
-        <div>
-            <div></div>
-            <div>
-                <form:button>Register</form:button>
-            </div>
-            <div></div>
-        </div>
-    </form:form>
-</div>
+<body>
+	<div class="wrap">
+		<div class="login-box">
+			<h1 class="title">Đăng nhập</h1>
+			<%--@elvariable id="user" type="com.example.Forum.model.User"--%>
+			<div class="login-form">
+				<form:form id="form" action="login" method="post"
+					modelAttribute="user">
+					<div class="form-item">
+						<form:label path="username">Tên đăng nhập:</form:label>
+						<form:input path="username" />
+						<form:errors path="username" cssClass="error" />
+					</div>
+					<div class="form-item">
+						<form:label path="password">Mật khẩu:</form:label>
+						<form:password path="password" />
+						<form:errors path="password" cssClass="error" />
+					</div>
+					<form:button class="btn-login">Đăng nhập</form:button>
+				</form:form>
+			</div>
+		</div>
+	</div>
+</body>
 </html>

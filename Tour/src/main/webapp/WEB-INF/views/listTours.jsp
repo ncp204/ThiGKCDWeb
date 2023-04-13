@@ -52,18 +52,20 @@ table thead tr {
 					</tr>
 				</thead>
 				<tbody>
+				<c:forEach var="tour" items="${tours}">
 					<tr>
-						<td><a href="tourDetails">PHÚ QUỐC (Khuyến mãi mùa hè)</a> <br>
-							<div>3 ngày 2 đêm</div>
+						<td><a href="tourDetails/${tour.getId()}">${tour.getTitle()}</a> <br>
+							<div>${tour.getDays()}</div>
 						<td>
-							<div>Tối thứ 6 và CN</div>
+							<div>${tour.getDepartureSchedule()}</div>
 						</td>
 						<td>
-							<div>1.500.000</div>
+							<div>${tour.getPrice()}</div>
 						</td>
 						<td class="text-align-center"><input type="button"
-							onclick="location.href='/bookingTour';" value="Đặt tour"></td>
+							onclick="location.href='/bookingTour/${tour.getId()}';" value="Đặt tour"></td>
 					</tr>
+				</c:forEach>
 				</tbody>
 			</table>
 		</div>

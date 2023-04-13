@@ -2,20 +2,22 @@ package com.example.tour.model;
 
 public class Tour {
 	private long id;
+	private String title;
 	private String description;
 	private String days;
 	private String transportation;
 	private String departureSchedule;
 	private double price;
-	
+
 	public Tour() {
-		
+
 	}
 
-	public Tour(long id, String description, String days, String transportation, String departureSchedule,
+	public Tour(long id, String title, String description, String days, String transportation, String departureSchedule,
 			double price) {
 		super();
 		this.id = id;
+		this.title = title;
 		this.description = description;
 		this.days = days;
 		this.transportation = transportation;
@@ -29,6 +31,14 @@ public class Tour {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getDescription() {

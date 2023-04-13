@@ -41,18 +41,35 @@ table thead tr {
 <body>
 	<div class="wrapper">
 		<div style="width: 600px;">
-			<h2>${tour.getTitle()}</h2>
+			<h2>Thông tin đặt Tour</h2>
 			<div>
-				<b>Số ngày: </b>${tour.getDays()}. <b>Phương tiện: </b>${tour.getTransportation()}. <b>Lịch khởi hành: </b>${tour.getDepartureSchedule()}
+			<b>${tour.getTitle()} </b>${tour.getDays()}
 			</div>
-			<h2>Chương trình chi tiết:</h2>
-			<div style="word-wrap: break-word;">
-				${tour.getDescription()}
+			<h2>Thông tin khách hàng</h2>
+			<div>
+				Họ tên: ${customer.getName()}
 			</div>
-			<div style="display: flex; justify-content: space-between; padding-top: 10px;">
-				<input type="button" onclick="location.href='/bookingTour/${tour.getId()}';"
-					value="Đặt tour">
-				<a href="/listTours">CHƯƠNG TRÌNH TOUR</a>
+			<div>
+				Địa chỉ: ${customer.getAddress()}
+			</div>
+			<div>
+				E-mail: ${customer.getEmail()}
+			</div>
+			<div>
+				Điện thoại: ${customer.getPhone()}
+			</div>
+			<h2>Thông tin chuyến đi</h2>
+			<div>
+				Ngày khởi hành: ${booking.getDepartuteDate()}
+			</div>
+			<div>
+				Số người lớn: ${booking.getNoAdults()}
+			</div>
+			<div>
+				Số trẻ em: ${booking.getNoChilrden()}
+			</div>
+			<div>
+				<input type="button" value="Xác nhận" onclick="location.href='/listTours';">
 			</div>
 		</div>
 	</div>

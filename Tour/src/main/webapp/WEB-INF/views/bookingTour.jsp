@@ -50,8 +50,8 @@ table thead tr {
 <body>
 	<div class="wrapper">
 		<div style="width: 600px;">
-			<h2>Đặt tour: NHA TRANG 2 NGÀY 1 ĐÊM</h2>
-			<form>
+			<h2>Đặt tour: ${tour.getTitle()}</h2>
+			<form method="post" action="/bookingTour/${tour.getId()}">
 				<div style="font-weight: bold;">Thông tin khách hàng</div>
 				<div class="input-form">
 					<label>Họ tên:(*)</label> 
@@ -63,7 +63,7 @@ table thead tr {
 				</div>
 				<div class="input-form">
 					<label>Email:(*)</label> 
-					<input name="fullName" type="text" required="required"/>
+					<input name="email" type="text" required="required"/>
 				</div>
 				<div class="input-form">
 					<label>Điện thoại</label> <input name="phone" type="text" />
@@ -71,23 +71,23 @@ table thead tr {
 				<br />
 				<div style="font-weight: bold;">Thông tin chuyến đi</div>
 				<div class="input-form">
-					<label>Ngày khởi hành(*)</label> <input name="date" type="datetime"
+					<label>Ngày khởi hành(*)</label> <input name="departuteDate" type="date"
 						pattern="dd/mm/yyy" required="required" />
 				</div>
 				<div class="input-form">
-					<label>Số người lớn:(*)</label> <input name="adult" type="number"
+					<label>Số người lớn:(*)</label> <input name="noAdults" type="number"
 						required="required" />
 				</div>
 				<div class="input-form">
-					<label>Số trẻ em</label> <input name="childrens" type="number" />
+					<label>Số trẻ em</label> <input name="noChildrens" type="number" />
 				</div>
 				<div style="padding-left: 250px;">
-					<input type="button" onclick="location.href='/bookingTour';"
-					value="Gởi">
-					<input type="button" onclick="location.href='/listTours';"
-					value="Hủy">
+					<input type="submit" value="Gởi">
 				</div>
 			</form>
+			<div style="position: relative;">
+				<input type="button" onclick="location.href='/listTours';" value="Hủy" style="position: absolute; left: 300px; top: -37px;">
+			</div>
 		</div>
 	</div>
 </body>

@@ -51,6 +51,18 @@ public class TourController {
 		String name = request.getParameter("fullName");
 		String address = request.getParameter("address");
 		String email = request.getParameter("email");
+		boolean checkEmail = TourService.getInstance().checkEmail(email);
+		if (checkEmail) {
+
+			RedirectView redirectView = new RedirectView();
+			redirectView.setUrl("/bookingTour/" + id);
+
+			ModelAndView modelAndView = new ModelAndView();
+			modelAndView.setView(redirectView);
+			modelAndView.addObject("error", "Email đã tồn tại");
+			return modelAndView;
+		}
+
 		String phone = request.getParameter("phone");
 		Customer customer = new Customer(id, name, address, email, phone);
 

@@ -51,6 +51,9 @@ table thead tr {
 	<div class="wrapper">
 		<div style="width: 600px;">
 			<h2>Đặt tour: ${tour.getTitle()}</h2>
+			<c:if test="${not empty error}">
+				<p class="error">${error}</p>
+			</c:if>
 			<form method="post" action="/bookingTour/${tour.getId()}">
 				<div style="font-weight: bold;">Thông tin khách hàng</div>
 				<div class="input-form">

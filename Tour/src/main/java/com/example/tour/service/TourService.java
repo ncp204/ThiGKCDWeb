@@ -56,6 +56,10 @@ public class TourService {
 	public Collection<Tour> getAllTours() {
 		return tours.values();
 	}
+	
+	public Collection<Customer> getAllCustomer() {
+		return customers.values();
+	}
 
 	public Tour getTour(Long id) {
 		Tour tour = null;
@@ -83,5 +87,15 @@ public class TourService {
 			}
 		}
 		return null;
+	}
+
+	public boolean checkEmail(String email) {
+		email = email.trim();
+		for (Customer customer : customers.values()) {
+			if (customer.getEmail().equalsIgnoreCase(email)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
